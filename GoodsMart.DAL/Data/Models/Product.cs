@@ -16,7 +16,7 @@ public class Product
     [MaxLength(50)]
     [MinLength(5)]
     public string Name { get; set; }=string.Empty;
-    [Range(0, 1000000, ErrorMessage = "The Price must be between {1} and {2}")]
+    [Range(0, 1000000, ErrorMessage = "The Price must be between {0} and {1}")]
     public double Price { get; set; }
     [Column(TypeName = "date")]
     [DateMustBeInFuture(ErrorMessage ="the Expiration date must be after 30 days minimully")]    //custum validation
